@@ -1,14 +1,15 @@
+import { gql } from '@apollo/client'
 import './App.css'
-import ApolloAppProvider from './components/ApolloProvider'
+
+import Home from './components/Home'
 
 function App() {
+
   
 
   return (
     <>
-      <ApolloAppProvider>
-        
-      </ApolloAppProvider>
+  <Home />
     </>
   )
 }

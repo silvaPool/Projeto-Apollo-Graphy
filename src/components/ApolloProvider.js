@@ -1,12 +1,15 @@
-const { ApolloClient, InMemoryCache } = require("@apollo/client");
+// const { ApolloClient, InMemoryCache } = require("@apollo/client");
 
-// configuração do apollo client
+// // configuração do apollo client
 
-const client = new ApolloClient({
-    uri: 'http://your-graphql-api-endpoint',
-    cache: new InMemoryCache(),
-});
-const ApolloAppProvider = ({children}) => {
-    return <ApolloAppProvider client={client}>{children}</ApolloAppProvider>
-};
-export default ApolloAppProvider;
+// const client = new ApolloClient({
+//     uri: 'https://rickandmortyapi.com/graphql',
+//     cache: new InMemoryCache(),
+// });
+// const ApolloAppProvider = ({children}) => {
+//     return <ApolloAppProvider client={client}>{children}</ApolloAppProvider>
+// };
+
+// export {client};
+
+// export default ApolloClient;

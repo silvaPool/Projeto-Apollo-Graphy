@@ -1,14 +1,26 @@
 import { gql, useQuery } from "@apollo/client";
 
+// const GET_USERS = gql`
+//     query GetUsers {
+//         users {
+//             id
+//             name
+//             status
+//         }
+//     }
+// `;
+
 const GET_USERS = gql`
     query GetUsers {
-        users {
-            id
-            name
-            email
-        }
+      results {
+        id
+        name
+        status
+        type
+      }
     }
-`;
+  `
+  
 
 const UserList = () => {
     const {loading, error, data} = useQuery(GET_USERS);
@@ -16,7 +28,7 @@ const UserList = () => {
     if (error) return <p>Error</p>;
     return (
         <ul>
-            {data.users.map((user) => (
+            {data.results.map((user) => (
                 <li key={user.id}>
                     {user.name} - {user.email}
                 </li>
